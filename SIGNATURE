@@ -14,13 +14,12 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 ba15952a44617f6b65cbcf9fc760de73887309bc Changes
+SHA1 96d374dc1f6eeaa1e6d9949a4fcd1d6ebfa347e9 Changes
 SHA1 f3296a09eb07898f3ba6dd0ece615dafc1b57e16 LICENSE
-SHA1 5f9a22bf7bc47c2fb6ef02e1a073ec186e42577d MANIFEST
-SHA1 36ebe347e1faef5907f869af22eb459d1dbd16ee META.yml
+SHA1 e5adbe33a939bdf88bbaea6a79f9ca02044fabcd MANIFEST
+SHA1 fe280f12a728f11e15c2dcdad5f76d4ba2c5d462 META.yml
 SHA1 7150e5e086ef493e1e527a1eeec44a8344b80db6 Makefile.PL
 SHA1 359db6a0b2c4fcffd0c95ff720bcb113138ee1e4 README
-SHA1 2dee46b3951a537648a57014df239bc67eeaa7f5 XML-LibXML-PrettyPrint-0.001.tar
 SHA1 5d94bc10deff1dd74e4bc5dfa6fc015e39271f15 inc/Module/AutoInstall.pm
 SHA1 40106479d4e07f379cb82ca1d69fca92e3a40f47 inc/Module/Install.pm
 SHA1 34a24a530ecf0365cc02e4150b06c9bed702a441 inc/Module/Install/AutoInstall.pm
@@ -40,10 +39,10 @@ SHA1 4db02ca3854a0d95bf38139e9b714cc85b618189 inc/Module/Package/Dist/RDF.pm
 SHA1 775bd24f2fdbb6dce51a8b5b0cdb01fccfce83c4 inc/Scalar/Util.pm
 SHA1 b1b664983568bf822c327599eb88e223483ae96a inc/Scalar/Util/PP.pm
 SHA1 eef6bff62046bff2ce08ba132d0b58fba30f40b4 inc/YAML/Tiny.pm
-SHA1 0110eb081e6857f80ddca397b967d4b976ec5185 lib/XML/LibXML/PrettyPrint.pm
-SHA1 1c31dc03f42f64a16a4254847016a5496587a844 meta/changes.ttl
+SHA1 f768835ccd73ae1f70e992bd6b663e983baf4d3b lib/XML/LibXML/PrettyPrint.pm
+SHA1 cd8bd86febd7fa3d61a2be8d3be173a6f1fc42d7 meta/changes.ttl
 SHA1 04e7e5edb3e8e2928c018171dfe09a602e303e74 meta/doap.ttl
-SHA1 4a09ae5e08e6f221eeaa99573b099580c050743d meta/makefile.ttl
+SHA1 ef785d792413d1312996e973b7c87e487e4839b6 meta/makefile.ttl
 SHA1 480ef837f3d64ed4d1a95759b8aba3e240356502 t/01basic.t
 SHA1 f4e9cbab7eede75ac4d22e38e51bddf3205de15e t/02stripws.t
 SHA1 47e48774798e4493e9038c98e020577425a6096d t/03indent.t
@@ -51,7 +50,7 @@ SHA1 0bd39110f7025dfae526868b3e853a6aba4128b8 t/04print.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (GNU/Linux)
 
-iEYEARECAAYFAk6gLw0ACgkQzr+BKGoqfTmFtgCgqv9X6YbzsTmZINA6iqnqm6Zr
-u+8AoIZNTXAZkw6Pbcl3iE/GDxSZp8lO
-=KWTy
+iEYEARECAAYFAk6yYeQACgkQzr+BKGoqfTkN2wCgqoAGlXK4UoU11VLqvtjv1YFl
+XKQAoKI5zbcOB6+ap43gWQPBzYasxKh2
+=9C3Z
 -----END PGP SIGNATURE-----

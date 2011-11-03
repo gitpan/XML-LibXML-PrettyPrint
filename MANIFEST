@@ -31,5 +31,4 @@ t/01basic.t
 t/02stripws.t
 t/03indent.t
 t/04print.t
-XML-LibXML-PrettyPrint-0.001.tar
 SIGNATURE                                Public-key signature (added by MakeMaker)
