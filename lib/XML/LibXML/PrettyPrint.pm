@@ -9,7 +9,7 @@ use utf8;
 BEGIN
 {
 	$XML::LibXML::PrettyPrint::AUTHORITY = 'cpan:TOBYINK';
-	$XML::LibXML::PrettyPrint::VERSION   = '0.002';
+	$XML::LibXML::PrettyPrint::VERSION   = '0.003';
 }
 
 use Carp 0 qw(croak carp);
@@ -17,7 +17,7 @@ use IO::Handle 0 qw();
 use Scalar::Util 0 qw(blessed refaddr);
 use XML::LibXML 1.62 qw(:ns);
 
-use base qw(Pragmatic);
+use parent qw(Pragmatic);
 
 BEGIN
 {
@@ -171,6 +171,7 @@ sub strip_whitespace
 	{
 		carp(sprintf("Don't know how to handle %s object", ref $node))
 			unless $node->nodeName eq '#comment'
+			||     $node->isa('XML::LibXML::CDATASection')
 			||     $node->isa('XML::LibXML::PI');
 		return 0;
 	}

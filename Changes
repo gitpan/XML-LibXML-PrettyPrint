@@ -5,15 +5,18 @@ Created:      2011-10-19
 Home page:    <https://metacpan.org/release/XML-LibXML-PrettyPrint>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=XML-LibXML-PrettyPrint>
 
+0.003  2012-03-15
+
+ - (Bugfix) Handle CDATA nodes.
+
 0.002  2011-11-03
 
- - Make elements with @property but no @content preserve whitespace in
-   HTML.
  - (Bugfix) new_from_html constructor was exposing a private lexical
    variable that I didn't want to expose.
  - (Packaging) Declare dependency on 'Pragmatic'.
+ - Make elements with @property but no @content preserve whitespace in
+   HTML.
 
-0.001  2011-10-20
-# Initial release
+0.001  2011-10-20  # Initial release
 
 

@@ -26,9 +26,11 @@ META.yml
 meta/changes.ttl
 meta/doap.ttl
 meta/makefile.ttl
+meta/rt-bugs.ttl
 README
 t/01basic.t
 t/02stripws.t
 t/03indent.t
 t/04print.t
+t/61cdata.t
 SIGNATURE                                Public-key signature (added by MakeMaker)
