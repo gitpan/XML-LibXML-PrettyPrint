@@ -3,13 +3,14 @@ abstract: 'add pleasant whitespace to a DOM tree'
 author:
   - 'Toby Inkster <tobyink@cpan.org>'
 build_requires:
-  ExtUtils::MakeMaker: 6.42
+  ExtUtils::MakeMaker: 6.59
   Test::More: 0.61
   Test::Warn: 0.20
 configure_requires:
-  ExtUtils::MakeMaker: 6.42
+  ExtUtils::MakeMaker: 6.59
 distribution_type: module
-generated_by: 'Module::Install version 1.02'
+dynamic_config: 0
+generated_by: 'Module::Install version 1.06'
 keywords: []
 license: perl
 meta-spec:
@@ -35,4 +36,8 @@ resources:
   bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=XML-LibXML-PrettyPrint
   homepage: https://metacpan.org/release/XML-LibXML-PrettyPrint
   license: http://dev.perl.org/licenses/
-version: 0.003
+version: 0.004
+x_contributors:
+  - 'Toby Inkster <tobyink@cpan.org>'
+  - TOBYINK
+  - Nobody
