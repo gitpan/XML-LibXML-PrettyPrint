@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.70.
+signed via the Module::Signature module, version 0.73.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,47 +14,30 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 373df0aabaec7fe8fb51482a59a5befd0b11e5b8 COPYRIGHT
-SHA1 3695f6d2595ba2b65711972b71077fb692619eaf CREDITS
-SHA1 ce63257066b816b0e1d3bbc73a0b5626e1bd9869 Changes
-SHA1 937d452c5c4069f4cda9ffaf45a33f1eb5f060e8 LICENSE
-SHA1 a67d1a788b0d5add6af6a2b6ed53a96d5698be81 MANIFEST
-SHA1 2bdc61c78b5bcfd6a526c0b08d5aa8387ab83a7d META.ttl
-SHA1 4c1cfb2866ff359a0ce19df323a48a8672bd2b0e META.yml
-SHA1 7150e5e086ef493e1e527a1eeec44a8344b80db6 Makefile.PL
-SHA1 22ec400b24e54346de73193b8c338adefcd4176f README
-SHA1 06c410f05488c1612ed66b06d3a86b2580581e4a inc/Module/AutoInstall.pm
-SHA1 8a924add836b60fb23b25c8506d45945e02f42f4 inc/Module/Install.pm
-SHA1 61ab1dd37e33ddbe155907ce51df8a3e56ac8bbf inc/Module/Install/AutoInstall.pm
-SHA1 c04f94f91fa97b9f8cfb5a36071098ab0e6c78e3 inc/Module/Install/AutoManifest.pm
-SHA1 2d0fad3bf255f8c1e7e1e34eafccc4f595603ddc inc/Module/Install/Base.pm
-SHA1 f0e01fff7d73cd145fbf22331579918d4628ddb0 inc/Module/Install/Can.pm
-SHA1 9e4cc10c7f138a3f2c60d9ee1f34261f0d8c5aae inc/Module/Install/Contributors.pm
-SHA1 7328966e4fda0c8451a6d3850704da0b84ac1540 inc/Module/Install/Fetch.pm
-SHA1 66d3d335a03492583a3be121a7d888f63f08412c inc/Module/Install/Include.pm
-SHA1 b62ca5e2d58fa66766ccf4d64574f9e1a2250b34 inc/Module/Install/Makefile.pm
-SHA1 1aa925be410bb3bfcd84a16985921f66073cc1d2 inc/Module/Install/Metadata.pm
-SHA1 3b9281ddf7dd6d6f5de0a9642c69333023193c80 inc/Module/Install/Package.pm
-SHA1 41f76ff6b39368a65da86377e43b34bacc2fb0eb inc/Module/Install/TrustMetaYml.pm
-SHA1 e4196994fa75e98bdfa2be0bdeeffef66de88171 inc/Module/Install/Win32.pm
-SHA1 c3a6d0d5b84feb3280622e9599e86247d58b0d18 inc/Module/Install/WriteAll.pm
-SHA1 26d58a041cd6b3d21db98b32e8fd1841aae21204 inc/Module/Package.pm
-SHA1 685e964c05a5f29d416f263c35589a10cb7296e1 inc/Module/Package/Dist/RDF.pm
-SHA1 feb933cefe2e3762e8322bd6071a2499f3440da1 inc/YAML/Tiny.pm
-SHA1 7b3050f6e88c3d935c3b0eaa6f917247242e6658 lib/XML/LibXML/PrettyPrint.pm
-SHA1 6f101fabb02dca617d2ab3b62e935cd410347f29 meta/changes.ttl
-SHA1 04e7e5edb3e8e2928c018171dfe09a602e303e74 meta/doap.ttl
-SHA1 4dcdd5603f22a490bcaea274f212aeb3abcb240e meta/makefile.ttl
-SHA1 4e25abdbd86d3cc67ea4428d4ac6c481856fd651 meta/rt-bugs.ttl
+SHA1 33317486c4fa2cf7fec85bf92ed38ac0f64233a0 CONTRIBUTING
+SHA1 2cb70b710a99a77da39f036f76b092f638380762 COPYRIGHT
+SHA1 4a475a6a4c60c03a6352ec84ae84ca3d03280f81 CREDITS
+SHA1 ae8ba858620a02df61807084ea09e173258f8d22 Changes
+SHA1 c35bc58591abe06e0ed00d7a74bb9b9a080e020a INSTALL
+SHA1 34f5e12514b91055de4b164a1f2327ef5c30ba53 LICENSE
+SHA1 484a05fb124a21eb35290779e58235d2483bf88d MANIFEST
+SHA1 89f04f0372db7a44a5b992df62b113b7b008e15e META.json
+SHA1 39885b7319dce4bfe2425fe8d6eedd2ece629fcb META.yml
+SHA1 b8d1ce9e70511f23dbac4e6dd8368f4c3ba38f0f Makefile.PL
+SHA1 d4a45b1e73bdd357c916ef65fa0e95787e8fb65b README
+SHA1 dd9cfd0f38b1d1298314067b60ab0271f473c142 bin/xml-pretty
+SHA1 00647e67b80290beb5bd443600e2ffbf78a2f5ad dist.ini
+SHA1 2149c118e54d48cddaafca55179cecd7cc19f4ed doap.ttl
+SHA1 ea5267cd4c9fb03c0d3595b4e4a9846d9cb58983 lib/XML/LibXML/PrettyPrint.pm
 SHA1 480ef837f3d64ed4d1a95759b8aba3e240356502 t/01basic.t
 SHA1 f4e9cbab7eede75ac4d22e38e51bddf3205de15e t/02stripws.t
 SHA1 47e48774798e4493e9038c98e020577425a6096d t/03indent.t
 SHA1 0bd39110f7025dfae526868b3e853a6aba4128b8 t/04print.t
 SHA1 5ed06b0452c77d095cff97808718bd17495ec02f t/61cdata.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.12 (GNU/Linux)
+Version: GnuPG v1
 
-iEYEARECAAYFAlIvTTUACgkQzr+BKGoqfTlXaACgtQ62rrWfEDQY+g20JYcZIe+i
-GtUAni0OCTQqJpnzFroYFei939V6lUWK
-=jJdq
+iEYEARECAAYFAlQMI3EACgkQzr+BKGoqfTngzACdFeMKyiFHB9XoZ22w30kn7XN/
+GUEAn3u79mXe03mkp1F/B9h9VCg28LX9
+=8G3i
 -----END PGP SIGNATURE-----

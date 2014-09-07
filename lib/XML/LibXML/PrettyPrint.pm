@@ -1,19 +1,24 @@
+use 5.010;
+use strict;
+use warnings;
+use utf8;
+
+no warnings qw( once void uninitialized );
+
+use IO::Handle 0 qw();
+
 package XML::LibXML::PrettyPrint;
 
-use 5.010;
-use common::sense;
 use constant { FALSE => 0, TRUE => 1 };
 use constant { EL_BLOCK => 1, EL_COMPACT => 2, EL_INLINE => 3};
-use utf8;
 
 BEGIN
 {
 	$XML::LibXML::PrettyPrint::AUTHORITY = 'cpan:TOBYINK';
-	$XML::LibXML::PrettyPrint::VERSION   = '0.004';
+	$XML::LibXML::PrettyPrint::VERSION   = '0.005';
 }
 
 use Carp 0 qw(croak carp);
-use IO::Handle 0 qw();
 use Scalar::Util 0 qw(blessed refaddr);
 use XML::LibXML 1.62 qw(:ns);
 
@@ -654,7 +659,7 @@ Toby Inkster E<lt>tobyink@cpan.orgE<gt>.
 
 =head1 COPYRIGHT AND LICENCE
 
-This software is copyright (c) 2011-2013 by Toby Inkster.
+This software is copyright (c) 2011-2014 by Toby Inkster.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
