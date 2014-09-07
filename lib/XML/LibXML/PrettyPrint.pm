@@ -1,4 +1,4 @@
-use 5.010;
+use 5.008001;
 use strict;
 use warnings;
 use utf8;
@@ -15,48 +15,41 @@ use constant { EL_BLOCK => 1, EL_COMPACT => 2, EL_INLINE => 3};
 BEGIN
 {
 	$XML::LibXML::PrettyPrint::AUTHORITY = 'cpan:TOBYINK';
-	$XML::LibXML::PrettyPrint::VERSION   = '0.005';
+	$XML::LibXML::PrettyPrint::VERSION   = '0.006';
 }
 
 use Carp 0 qw(croak carp);
 use Scalar::Util 0 qw(blessed refaddr);
 use XML::LibXML 1.62 qw(:ns);
 
-use parent qw(Pragmatic);
+use Exporter::Tiny ();
 
-BEGIN
-{
-	our %PRAGMATA = (
-		io => sub {
-					*IO::Handle::print_xml = sub ($$;$)
-					{
-						my ($handle, $xml, $indent) = @_;
-						unless (blessed($xml))
-						{
-							local $@ = undef;
-							eval { $xml = XML::LibXML->new->parse_string($xml); 1; }
-								or croak("Could not parse XML: $@");
-						}
-						$indent //= 0;
-						$handle->print(__PACKAGE__->pretty_print($xml, $indent)->toString);
-					};
-				},
-		);
-	our @EXPORT      = qw();
-	our @EXPORT_OK   = qw(print_xml EL_BLOCK EL_COMPACT EL_INLINE);
-	our %EXPORT_TAGS = (
-		'all'       => \@EXPORT_OK,
-		'default'   => \@EXPORT,
-		'constants' => [qw(EL_BLOCK EL_COMPACT EL_INLINE)],
-		);
-}
+our @ISA         = 'Exporter::Tiny';
+our @EXPORT      = qw();
+our @EXPORT_OK   = qw(print_xml EL_BLOCK EL_COMPACT EL_INLINE);
+our %EXPORT_TAGS = (
+	constants => [qw(EL_BLOCK EL_COMPACT EL_INLINE)],
+	io        => sub {
+		*IO::Handle::print_xml = sub ($$;$) {
+			my ($handle, $xml, $indent) = @_;
+			unless (blessed($xml)) {
+				local $@ = undef;
+				eval { $xml = XML::LibXML->new->parse_string($xml); 1; }
+					or croak("Could not parse XML: $@");
+			}
+			$indent = 0 unless defined $indent;
+			$handle->print(__PACKAGE__->pretty_print($xml, $indent)->toString);
+		};
+		return;
+	},
+);
 
 our $Whitespace = qr/[\x20\t\r\n]/; # @@TODO need to check XML spec
 
 sub new
 {
 	my ($class, %options) = @_;
-	$options{element} //= delete $options{elements};
+	$options{element} = delete $options{elements} unless defined $options{element};
 	if (defined $options{indent_string})
 	{
 		carp("Non-whitespace indent_string supplied")
@@ -187,7 +180,7 @@ sub indent
 	my ($self, $node, $indent_level) = @_;
 	$self = $self->_ensure_self;	
 	
-	$indent_level //= 0;
+	$indent_level = 0 unless defined $indent_level;
 
 	$self->indent($node->documentElement, $indent_level)
 		if blessed($node) && $node->nodeName eq '#document';
@@ -318,7 +311,10 @@ sub indent_string
 	my ($self, $level) = @_;
 	$self = $self->_ensure_self;
 	
-	return ($self->{indent_string} // "\t") x $level;
+	$self->{indent_string} = "\t"
+		unless defined $self->{indent_string};
+	
+	$self->{indent_string} x $level;
 }
 
 sub new_line
@@ -326,7 +322,10 @@ sub new_line
 	my ($self, $level) = @_;
 	$self = $self->_ensure_self;
 	
-	return $self->{new_line} // "\n";
+	$self->{new_line} = "\n"
+		unless defined $self->{new_line};
+	
+	$self->{new_line};
 }
 
 sub element_category
@@ -376,7 +375,7 @@ sub print_xml ($;$)
 		eval { $xml = XML::LibXML->new->parse_string($xml); 1; }
 			or croak("Could not parse XML: $@");
 	}
-	$indent //= 0;
+	$indent = 0 unless defined $indent;
 	print __PACKAGE__->pretty_print($xml, $indent)->toString;
 }
 

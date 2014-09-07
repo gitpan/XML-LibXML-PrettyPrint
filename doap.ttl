@@ -13,8 +13,8 @@
 <http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/project>
 	a                    doap:Project;
 	doap-bugs:issue      <http://purl.org/NET/cpan-uri/rt/ticket/71821>, <http://purl.org/NET/cpan-uri/rt/ticket/75752>, <http://purl.org/NET/cpan-uri/rt/ticket/90036>, <http://purl.org/NET/cpan-uri/rt/ticket/96000>;
-	doap-deps:runtime-requirement [ doap-deps:on "parent"^^doap-deps:CpanId ], [ doap-deps:on "Pragmatic"^^doap-deps:CpanId ], [ doap-deps:on "XML::LibXML 1.62"^^doap-deps:CpanId ];
-	doap-deps:test-requirement [ doap-deps:on "Test::More 0.61"^^doap-deps:CpanId ], [ doap-deps:on "Test::Warn"^^doap-deps:CpanId ];
+	doap-deps:runtime-requirement [ doap-deps:on "perl 5.008001"^^doap-deps:CpanId ], [ doap-deps:on "Exporter::Tiny"^^doap-deps:CpanId ], [ doap-deps:on "XML::LibXML 1.62"^^doap-deps:CpanId ];
+	doap-deps:test-requirement [ doap-deps:on "Test::More 0.96"^^doap-deps:CpanId ], [ doap-deps:on "Test::Warnings"^^doap-deps:CpanId ];
 	doap:bug-database    <http://rt.cpan.org/Dist/Display.html?Queue=XML-LibXML-PrettyPrint>;
 	doap:created         "2011-10-19"^^xsd:date;
 	doap:download-page   <https://metacpan.org/release/XML-LibXML-PrettyPrint>;
@@ -27,7 +27,7 @@
 	];
 	doap:name            "XML-LibXML-PrettyPrint";
 	doap:programming-language "Perl";
-	doap:release         <http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/v_0-001>, <http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/v_0-002>, <http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/v_0-003>, <http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/v_0-004>, <http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/v_0-005>;
+	doap:release         <http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/v_0-001>, <http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/v_0-002>, <http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/v_0-003>, <http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/v_0-004>, <http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/v_0-005>, <http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/v_0-006>;
 	doap:repository      [
 		a doap:GitRepository;
 		doap:browse <https://github.com/tobyink/p5-xml-libxml-prettyprint>;
@@ -103,6 +103,28 @@
 	];
 	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-LibXML-PrettyPrint-0.005.tar.gz>;
 	doap:revision        "0.005"^^xsd:string.
+
+<http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/v_0-006>
+	a                    doap:Version;
+	dc:issued            "2014-09-07"^^xsd:date;
+	doap-changeset:changeset [
+		doap-changeset:item [
+			a doap-changeset:Change;
+			rdfs:label "Backport to Perl 5.8.1."@en;
+		], [
+			a doap-changeset:Tests;
+			rdfs:label "Rewrite test suite to use Test::Warnings instead of Test::Warn."@en;
+		], [
+			a doap-changeset:Change;
+			rdfs:label "Inherit from Exporter::Tiny instead of Pragmatic."@en;
+		], [
+			a doap-changeset:Change;
+			rdfs:label "Don't use parent.pm to establish inheritance."@en;
+		];
+		doap-changeset:versus <http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/v_0-005>;
+	];
+	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-LibXML-PrettyPrint-0.006.tar.gz>;
+	doap:revision        "0.006"^^xsd:string.
 
 <http://purl.org/NET/cpan-uri/person/ALTREUS>
 	a                    foaf:Agent;

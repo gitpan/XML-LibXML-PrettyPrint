@@ -19,12 +19,12 @@ my $meta = {
   "prereqs"            => {
                             configure => { requires => { "ExtUtils::MakeMaker" => 6.17 } },
                             runtime => {
-                              requires => { "parent" => 0, "Pragmatic" => 0, "XML::LibXML" => 1.62 },
+                              requires => { "Exporter::Tiny" => 0, "perl" => 5.008001, "XML::LibXML" => 1.62 },
                             },
-                            test => { requires => { "Test::More" => 0.61, "Test::Warn" => 0 } },
+                            test => { requires => { "Test::More" => 0.96, "Test::Warnings" => 0 } },
                           },
   "provides"           => {
-                            "XML::LibXML::PrettyPrint" => { file => "lib/XML/LibXML/PrettyPrint.pm", version => 0.005 },
+                            "XML::LibXML::PrettyPrint" => { file => "lib/XML/LibXML/PrettyPrint.pm", version => 0.006 },
                           },
   "release_status"     => "stable",
   "resources"          => {
@@ -40,7 +40,7 @@ my $meta = {
                                             },
                             X_identifier => "http://purl.org/NET/cpan-uri/dist/XML-LibXML-PrettyPrint/project",
                           },
-  "version"            => 0.005,
+  "version"            => 0.006,
   "x_provides_scripts" => { "xml-pretty" => { file => "bin/xml-pretty" } },
 };
 

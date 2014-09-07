@@ -6,6 +6,16 @@ Home page:    <https://metacpan.org/release/XML-LibXML-PrettyPrint>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=XML-LibXML-PrettyPrint>
 Maintainer:   Toby Inkster <tobyink@cpan.org>
 
+0.006	2014-09-07
+
+ [ Test Suite ]
+ - Rewrite test suite to use Test::Warnings instead of Test::Warn.
+
+ [ Other ]
+ - Backport to Perl 5.8.1.
+ - Don't use parent.pm to establish inheritance.
+ - Inherit from Exporter::Tiny instead of Pragmatic.
+
 0.005	2014-09-07
 
  [ Packaging ]
